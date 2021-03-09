@@ -1,4 +1,4 @@
-# AZK-MacroKeyboard-Platform
+# AZK-MacroKeyboard-Platform (Work in Progress)
 Macro Keyboard Platform that uses Serial and EEPROM to configure a keyboard instead of flashing firmware
 
 This allows a macro keyboards (based on boards like 32u4) to have their keystroke combinations reconfigured from platforms where toolchains are not avaiable and also allows configuration programs to be made with simple Serial commands
