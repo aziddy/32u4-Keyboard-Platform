@@ -12,6 +12,7 @@ int key[127][4];
 
 void setup() {
 
+  initialize_serial();
 
   /* special key definitions can be founder here
    * https://github.com/arduino-libraries/Keyboard/blob/master/src/Keyboard.h
@@ -47,6 +48,18 @@ void setup() {
 }
 
 
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+
+
+
+
+// DONT NEED TO EDIT CODE BELOW
+
 void write_eeprom(){
   // First EEPROM index specifies how many keys the layout has
   EEPROM[0] = number_of_keys;
@@ -59,10 +72,23 @@ void write_eeprom(){
   }
 }
 
+
 void serial_report_eeprom(){
+  Serial.print("Number of Keys");
+  Serial.println(EEPROM[0]);
+
+  
   
 }
 
+
+void initialize_serial(){
+  Serial.begin(9600);
+  while (!Serial) {
+    // wait for serial port to connect. Needed for Native USB only
+  }
+  Serial.println("Serial Initialized");
+}
 
 void loop(){
 }
