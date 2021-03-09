@@ -6,13 +6,13 @@
  * https://www.arduino.cc/en/Reference/EEPROMObject
   */
 
-#define number_of_keys 2
+#define number_of_keys 4
 
 int key[127][4];
 
 void setup() {
 
-  delay(10000);
+  delay(5000);
   
   initialize_serial();
 
@@ -36,14 +36,14 @@ void setup() {
     key[1][3] = 0;
     
   // 4 key layout
-  key[0][0] = 0xB0;
-    key[0][1] = 0;
-    key[0][2] = 0;
-    key[0][3] = 0;
-  key[1][0] = 0xEA;
-    key[1][1] = 0;
-    key[1][2] = 0;
-    key[1][3] = 0;
+  key[2][0] = 0xB0;
+    key[2][1] = 0;
+    key[2][2] = 0;
+    key[2][3] = 0;
+  key[3][0] = 0xEA;
+    key[3][1] = 0;
+    key[3][2] = 0;
+    key[3][3] = 0;
     
 
   write_eeprom();
@@ -72,13 +72,13 @@ void write_eeprom(){
     EEPROM[1+(i*4)] = key[i][0];
     EEPROM[2+(i*4)] = key[i][1];
     EEPROM[3+(i*4)] = key[i][2];
-    EEPROM[4+(i*4)] = key[i][3];
+    EEPROM[4+(i*4)] = key[i][3]; 
   }
 }
 
 
 void serial_report_eeprom(){
-  Serial.print("Number of Keys");
+  Serial.print("Number of Keys ");
   int numberOfKeys = EEPROM[0];
   Serial.println(numberOfKeys);
   
@@ -91,10 +91,13 @@ void serial_report_eeprom(){
     Serial.print(i);
     Serial.print(": ");
     
-    Serial.print(EEPROM[1+(i*4)]);
-    Serial.print(EEPROM[2+(i*4)]);
-    Serial.print(EEPROM[3+(i*4)]);
-    Serial.println(EEPROM[4+(i*4)]);
+    Serial.print(EEPROM[1+(i*4)], HEX);
+    Serial.print("-");
+    Serial.print(EEPROM[2+(i*4)], HEX);
+    Serial.print("-");
+    Serial.print(EEPROM[3+(i*4)], HEX);
+    Serial.print("-");
+    Serial.println(EEPROM[4+(i*4)], HEX);
 
     Serial.println("");
     Serial.println("/////////////////");
