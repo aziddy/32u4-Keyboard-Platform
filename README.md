@@ -16,4 +16,5 @@ Four 8bit EEPROM spaces are allocated to each key to allow for shortcut combinat
 
 
 ## Programmatically Challenged Reconfigure
-1. 
+1. **processingGUIConfigurator** - *Consumers will run the this on their computer, giving them a GUI interface that communicates with the board over serial*<br>
+2. **Any Serial Capable Program**
