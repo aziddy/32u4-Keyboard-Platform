@@ -12,7 +12,7 @@ Four 8bit EEPROM spaces are allocated to each key to allow for shortcut combinat
 
 ## Instructions -- making a new macro keyboard from scratch (Some Programming and Embedded Exp Required)
 1. **Layout_initializer** - *Here we will define how many keys are used and intial keystroke combinations*<br>
-2. **Core** - *Map Keys to Pins and loads main firmware onto your board*
+2. **Core** - *Map Keys to Pins and loads main firmware(keybaord and serialConfigure Programs) onto your board*
 
 <br><br>
 
