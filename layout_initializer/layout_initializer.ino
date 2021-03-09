@@ -12,6 +12,8 @@ int key[127][4];
 
 void setup() {
 
+  delay(10000);
+  
   initialize_serial();
 
   /* special key definitions can be founder here
@@ -42,9 +44,7 @@ void setup() {
     key[1][1] = 0;
     key[1][2] = 0;
     key[1][3] = 0;
-  
-
-  delay(10000);
+    
 
   write_eeprom();
   serial_report_eeprom();
