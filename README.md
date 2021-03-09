@@ -31,10 +31,10 @@ Four 8bit EEPROM spaces are allocated to each key to allow for shortcut combinat
 | --------------- | -------------  |
 |  0              | Stores ***N*** |
 
-For (*x* = 0; *x* < ***N***; *x*++)
+For (***x*** = 0; ***x*** < ***N***; ***x***++)
 | EEPROM Address  | Data           |
 | --------------- | -------------  |
-| 1+(***N***\*4)  | Stores Key *x*'s 1st part of the key combination  |
-| 2+(***N***\*4)  | Stores Key *x*'s 2nd part of the key combination  |
-| 3+(***N***\*4)  | Stores Key *x*'s 3rd part of the key combination  |
-| 4+(***N***\*4)  | Stores Key *x*'s 4th part of the key combination  |
+| 1+(***x***\*4)  | Stores Key ***x***'s 1st part of the key combination  |
+| 2+(***x***\*4)  | Stores Key ***x***'s 2nd part of the key combination  |
+| 3+(***x***\*4)  | Stores Key ***x*'s 3rd part of the key combination  |
+| 4+(***x***\*4)  | Stores Key ***x***'s 4th part of the key combination  |
