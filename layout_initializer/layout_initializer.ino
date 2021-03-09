@@ -18,6 +18,10 @@ void setup() {
    * https://github.com/arduino-libraries/Keyboard/blob/master/src/Keyboard.h
    * (MAC) command ⌘ == KEY_LEFT_GUI
    */
+
+   /*
+    * Four, 8bit EEPROM spaces are allocated to each key to allow for shortcut combinations up to 4 keys
+    */
  
   // 2 key layout
   key[0][0] = KEY_LEFT_CTRL;
