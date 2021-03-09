@@ -95,6 +95,10 @@ void serial_report_eeprom(){
     Serial.print(EEPROM[2+(i*4)]);
     Serial.print(EEPROM[3+(i*4)]);
     Serial.println(EEPROM[4+(i*4)]);
+
+    Serial.println("");
+    Serial.println("/////////////////");
+    Serial.println("");
     
   }
 }
