@@ -69,20 +69,34 @@ void write_eeprom(){
   EEPROM[0] = number_of_keys;
 
   for(int i = 0; i < number_of_keys; i++ ){
-    EEPROM[0+(i*4)] = key[i][0];
-    EEPROM[1+(i*4)] = key[i][1];
-    EEPROM[2+(i*4)] = key[i][2];
-    EEPROM[3+(i*4)] = key[i][3];
+    EEPROM[1+(i*4)] = key[i][0];
+    EEPROM[2+(i*4)] = key[i][1];
+    EEPROM[3+(i*4)] = key[i][2];
+    EEPROM[4+(i*4)] = key[i][3];
   }
 }
 
 
 void serial_report_eeprom(){
   Serial.print("Number of Keys");
-  Serial.println(EEPROM[0]);
+  int numberOfKeys = EEPROM[0];
+  Serial.println(numberOfKeys);
+  
+  Serial.println("");
+  Serial.println("/////////////////");
+  Serial.println("");
 
-  
-  
+  for(int i = 0; i < numberOfKeys; i++ ){
+    Serial.print("Key ");
+    Serial.print(i);
+    Serial.print(": ");
+    
+    Serial.print(EEPROM[1+(i*4)]);
+    Serial.print(EEPROM[2+(i*4)]);
+    Serial.print(EEPROM[3+(i*4)]);
+    Serial.println(EEPROM[4+(i*4)]);
+    
+  }
 }
 
 
