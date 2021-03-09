@@ -8,13 +8,33 @@ Only problem is that EEPROM on boards like 32u4 can only be written to finite am
 
 Four 8bit EEPROM spaces are allocated to each key to allow for shortcut combinations up to 4 keys
 
-
+<br><br>
 
 ## Instructions -- making a new macro keyboard from scratch (Some Programming and Embedded Exp Required)
 1. **Layout_initializer** - *Here we will define how many keys are used and intial keystroke combinations*<br>
 2. **Core** - *Map Keys to Pins and loads main firmware onto your board*
 
+<br><br>
 
 ## Programmatically Challenged Reconfigure
 1. **processingGUIConfigurator** - *Consumers will run the this on their computer, giving them a GUI interface that communicates with the board over serial*<br>
 2. **Any Serial Capable Program**
+
+
+<br><br>
+
+## EEPROM
+
+***N*** - *number of keys*
+
+| EEPROM Address  | Data           |
+| --------------- | -------------  |
+|  0              | Stores ***N*** |
+
+For (*x* = 0; *x* < ***N***; *x*++)
+| EEPROM Address  | Data           |
+| --------------- | -------------  |
+| 1+(***N***\*4)  | Stores Key *x*'s 1st part of the key combination  |
+| 2+(***N***\*4)  | Stores Key *x*'s 2nd part of the key combination  |
+| 3+(***N***\*4)  | Stores Key *x*'s 3rd part of the key combination  |
+| 4+(***N***\*4)  | Stores Key *x*'s 4th part of the key combination  |
