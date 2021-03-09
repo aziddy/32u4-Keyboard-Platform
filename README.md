@@ -6,7 +6,6 @@ This allows a macro keyboards (based on boards like 32u4) to have their keystrok
 
 Only problem is that EEPROM on boards like 32u4 can only be written to finite amount of times. So sacrifices will be made on layout customization
 
-Four 8bit EEPROM spaces are allocated to each key to allow for shortcut combinations up to 4 keys
 
 <br><br>
 
@@ -24,6 +23,8 @@ Four 8bit EEPROM spaces are allocated to each key to allow for shortcut combinat
 <br><br>
 
 ## EEPROM
+
+Four, 8bit EEPROM spaces are allocated to each key to allow for shortcut combinations up to 4 keys
 
 ***N*** - *number of keys*
 
