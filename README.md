@@ -36,5 +36,5 @@ For (***x*** = 0; ***x*** < ***N***; ***x***++)
 | --------------- | -------------  |
 | 1+(***x***\*4)  | Stores Key ***x***'s 1st part of the key combination  |
 | 2+(***x***\*4)  | Stores Key ***x***'s 2nd part of the key combination  |
-| 3+(***x***\*4)  | Stores Key ***x*'s 3rd part of the key combination  |
+| 3+(***x***\*4)  | Stores Key ***x***'s 3rd part of the key combination  |
 | 4+(***x***\*4)  | Stores Key ***x***'s 4th part of the key combination  |
